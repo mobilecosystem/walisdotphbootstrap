@@ -1,0 +1,1 @@
+lessc bootstrap.less > ../dist/css/bootstrap.css && lessc -x bootstrap.less > ../dist/css/bootstrap.min.css 
