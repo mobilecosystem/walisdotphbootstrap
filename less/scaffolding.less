@@ -17,6 +17,9 @@
 html {
   font-size: 62.5%;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  //-webkit-text-stroke: 0.3px;
+  //-webkit-font-smoothing: antialiased;
+  //text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
 body {
@@ -127,4 +130,65 @@ hr {
   overflow: hidden;
   clip: rect(0 0 0 0);
   border: 0;
+}
+
+///////////////
+// Walis.PH
+///////////////
+
+.display-none { display: none; }
+.font-oscondensed { font-family: 'Open Sans Condensed', sans-serif; }
+.font-opensans { font-family: 'Open Sans', sans-serif; }
+// Google Fonts
+
+.font-open_sansregular { font-family: 'open_sansregular', sans-serif; }
+
+.font-open_sansbold { font-family: 'open_sansbold', sans-serif; }
+.font-open_sansbold_italic { font-family: 'open_sansbold_italic', sans-serif; }
+
+.font-open_sansextrabold { font-family: 'open_sansextrabold', sans-serif; }
+.font-open_sansextrabold_italic { font-family: 'open_sansextrabold_italic', sans-serif; }
+
+.font-open_sansitalic { font-family: 'open_sansitalic', sans-serif; }
+
+.font-open_sanslight { font-family: 'open_sanslight', sans-serif; }
+.font-open_sanslight_italic { font-family: 'open_sanslight_italic', sans-serif; }
+
+.font-open_sanssemibold { font-family: 'open_sanssemibold', sans-serif; }
+.font-open_sanssemibold_italic { font-family: 'open_sanssemibold_italic', sans-serif; }
+
+.font-open_sans_condensedbold { font-family: 'open_sans_condensedbold', sans-serif; }
+.font-open_sanscondensed_light { font-family: 'open_sanscondensed_light', sans-serif; }
+.font-open_sansCnLtIt { font-family: 'open_sansCnLtIt', sans-serif; }
+
+.header-title {
+  font-size: 5em;
+  font-weight: bold;
+  &:extend(.font-open_sansbold); // chrome and safari
+  @media (max-width: @screen-xs) { 
+    & {
+      font-size: 2.5em;
+    }
+  }
+}
+.tooltip {
+  .font-smoothing();
+  .tooltip-inner {
+    border-radius: 0!important;
+  }
+}
+
+// BROWSERS COMPATIBLITY
+///////////////////////////////
+.browser-firefox {
+  // mozilla
+  .header-title {
+    &:extend(.font-open_sanssemibold);
+  }
+  .font-open_sansbold {
+    &:extend(.font-open_sanssemibold);
+  }
+  .font-open_sansbold-force {
+    &:extend(.font-open_sansbold);
+  }
 }
