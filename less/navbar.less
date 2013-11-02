@@ -8,13 +8,21 @@
 // Provide a static navbar from which we expand to create full-width, fixed, and
 // other navbar variations.
 
+
+.walis-navbar-bg(@opacity: 20%) {
+  background-color: fade(#FFF, @opacity);
+}
+
 .navbar {
   position: relative;
+  font-family: "Open Sans Condensed";
   z-index: @zindex-navbar;
   //min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: @navbar-margin-bottom;
   border: 1px solid transparent;
+  //.box-shadow(0 0 15px rgba(0,0,0,0.5));
+  .walis-navbar-bg();
 
   // Prevent floats from breaking the navbar
   .clearfix();
@@ -23,7 +31,6 @@
     //border-radius: @navbar-border-radius;
   }
 }
-
 
 // Navbar heading
 //
@@ -64,7 +71,8 @@
   }
   @media (max-width: @screen-xs-max) {
     & {
-      background-color: @navbar-inverse-bg;
+      //background-color: @walis-navbar-bg;
+      .walis-navbar-bg(70%);
       text-align: center;
     }
   }
@@ -161,35 +169,28 @@
   &:hover,
   &:focus {
     text-decoration: none;
+    img.animated {
+      display: none;
+    }
+    img.hidden {
+      display: block !important;
+      visibility: visible !important;
+    }
   }
   // UBL Compilations
-  padding: 10px 30px;
+  padding: 0 15px;
   margin-left: 20px;
   //border-bottom: 1px solid @navbar-default-toggle-border-color;
   //border-left: 1px solid @navbar-default-toggle-border-color;
   //border-right: 1px solid @navbar-default-toggle-border-color;
   //background-color: @navbar-default-bg;
-  background-color: @ubl-color;
+  //background-color: #ebebeb;
   img {
-    height: 50px;
+    max-height: 50px;
+    height: 100%;
+    padding-top: 7px;
+    padding-bottom: 7px;
     .transition(all .2s);
-  }
-  // UBL Compilations
-  &.affixed {
-    border-left: 0;
-    border-right: 0;
-    img {
-      height: 30px;
-    }
-  }
-  @media (max-width: @screen-md-max) {
-    & {
-      border-left: 0;
-      border-right: 0;
-      img {
-        height: 30px;
-      }
-    }
   }
   @media (min-width: @grid-float-breakpoint) {
     .navbar > .container & {
@@ -522,15 +523,16 @@
 // Inverse navbar
 
 .navbar-inverse {
-  background-color: @navbar-inverse-bg;
-  border-color: @navbar-inverse-border;
+  //background-color: @navbar-inverse-bg;
+  border-color: fade(@navbar-inverse-border,40%);
+  .box-shadow(0 0 15px fade(@navbar-inverse-border, 45%));
 
   .navbar-brand {
     color: @navbar-inverse-brand-color;
     &:hover,
     &:focus {
       color: @navbar-inverse-brand-hover-color;
-      background-color: @navbar-inverse-brand-hover-bg;
+      //background-color: @navbar-inverse-brand-hover-bg;
     }
   }
 
@@ -569,9 +571,10 @@
   // Darken the responsive nav toggle
   .navbar-toggle {
     border-color: @navbar-inverse-toggle-border-color;
+    background-color: @navbar-inverse-toggle-hover-bg;
     &:hover,
     &:focus {
-      background-color: @navbar-inverse-toggle-hover-bg;
+      //background-color: @navbar-inverse-toggle-hover-bg;
       outline: 0;
     }
     .icon-bar {
