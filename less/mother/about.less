@@ -1,0 +1,42 @@
+#about {
+	padding-top: (@line-height-computed * 2);
+	padding-bottom: (@line-height-computed * 3);
+	min-height: 525px;
+	width: 100%;
+	overflow: hidden;
+	background-color: #FFF;
+	background-image: url("@{cdn}images/@{theme}/@{about}");
+	.tooltip { font-size: .8em;	}
+	.img {
+		// events
+		&:hover, &:focus {
+			img {
+				cursor: pointer;
+			}
+		}
+
+		> .wrapper {
+			//border-radius: 50%;
+			overflow: hidden;
+			max-width: 400px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		img {
+			//.transition(all .2s);
+			width: 100%;
+			//border-radius: 50%;
+			//border: 5px solid fade(#FFF, 80%);
+			//background-color: fade(#FFF, 80%);
+		}
+	}
+	.description {
+		small {
+			position: relative;
+			top: -@font-size-small;
+		}
+		.name { font-weight: 300; }
+	}
+
+}

@@ -1,0 +1,31 @@
+#contact {
+	max-height: 600px;
+	color: #FFF;
+	.container {
+		padding-top: (@line-height-computed * 2);
+		.header-title {
+			.txt-shadow();
+		}
+	}
+	.map {		
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		z-index: -9;
+		max-height: 600px;
+		.overlay {
+			background-color: fade(#000, 50%);
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			z-index: 1;
+		}
+		iframe {
+			width: 100%;
+			border: none;
+			height: 100%;
+			vertical-align: middle;
+			z-index: -11;
+		}
+	}
+}
