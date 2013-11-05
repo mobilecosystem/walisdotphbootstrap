@@ -2,12 +2,16 @@
 	padding-top: 50px;
 	padding-bottom: (@line-height-computed * 2);
 	background-image: url("@{cdn}images/@{theme}/@{home}");
-	background-position: 50% 0;
-	// background-size: cover;
+	background-position: center center;
+			background-size: cover;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+		 -o-background-size: cover;
+				
 	background-repeat: no-repeat;
 	background-color: #050306;
 	//background-attachment: fixed;
-	.transition(background-position .2s);
+	//.transition(background-position .2s);
 	color: white;
 	.left {
 		// LEFT SIDE
@@ -29,6 +33,12 @@
 		}
 		.header-title {
 			font-size: 3.5em;
+			font-weight: normal;
+			@media (max-width: @screen-xs) { 
+				& {
+					font-size: 2.5em;
+				}
+			}
 		}
 		.txt-shadow(#000);
 	}
@@ -92,4 +102,13 @@
 		}
 	}
 
+}
+// BANADS
+#banads {
+	.carousel-inner {
+		img {
+			width: 100%;
+			text-align: center;
+		}
+	}
 }

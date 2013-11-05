@@ -6,7 +6,10 @@
 	overflow: hidden;
 	background-color: #FFF;
 	background-image: url("@{cdn}images/@{theme}/@{about}");
-	.tooltip { font-size: .8em;	}
+	overflow: hidden;
+	.tooltip {
+		&:extend(.font-open_sanssemibold);
+	}
 	.img {
 		// events
 		&:hover, &:focus {
@@ -30,6 +33,9 @@
 			//border: 5px solid fade(#FFF, 80%);
 			//background-color: fade(#FFF, 80%);
 		}
+	}
+	.contents {
+		padding-top: (@line-height-computed * 2);
 	}
 	.description {
 		small {

@@ -1,7 +1,41 @@
 #contact {
 	max-height: 600px;
 	color: #FFF;
-	.container {
+	overflow: hidden;
+	.gmap-btn-bck {
+		width: 100%;
+		position: absolute;
+		display: none;
+		.contents {
+			padding-top: (@line-height-computed * 2);
+			background-color: fade(#000, 50%);
+			cursor: pointer;
+
+			margin-top: -(@line-height-computed * 2);
+			.transition(all .2s);
+			&:hover,
+			&:focus {
+				padding-bottom: @line-height-computed;
+				padding-top: @line-height-computed;
+				margin-top: 0;
+			}
+		}
+	}
+	.gmap-btn {
+		position: absolute;
+		padding: 10px;
+		background-color: fade(#000, 20%);
+		color: #FFF;
+		cursor: pointer;
+		&:hover,
+		&:focus {
+
+		}
+	}
+	.tooltip {
+		&:extend(.font-open_sanscondensed_light);
+	}
+	.contact-container.container {
 		padding-top: (@line-height-computed * 2);
 		.header-title {
 			.txt-shadow();
@@ -26,6 +60,27 @@
 			height: 100%;
 			vertical-align: middle;
 			z-index: -11;
+		}
+	}
+	.contents {
+		textarea {
+			max-width: 100%;
+			width: 100%;
+			resize: none;
+			height: 100%;
+			min-height: 120px;
+		}
+		.form-control {
+			padding-top: @padding-base-horizontal;
+			padding-bottom: @padding-base-horizontal;
+			height: auto!important;
+		}
+		.form-group {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.submit {
+			color: #000;
 		}
 	}
 }

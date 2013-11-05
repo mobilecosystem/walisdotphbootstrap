@@ -183,37 +183,47 @@ hr {
 .header-title,
 .browser-firefox .font-open_sansbold-force {
   font-family: 'open_sansbold', sans-serif;
+  font-weight: normal;
 }
 .font-open_sansbold_italic {
   font-family: 'open_sansbold_italic', sans-serif;
+  font-weight: normal;
 }
 .font-open_sansextrabold {
   font-family: 'open_sansextrabold', sans-serif;
+  font-weight: normal;
 }
 .font-open_sansextrabold_italic {
   font-family: 'open_sansextrabold_italic', sans-serif;
+  font-weight: normal;
 }
 .font-open_sansitalic {
   font-family: 'open_sansitalic', sans-serif;
 }
 .font-open_sanslight {
   font-family: 'open_sanslight', sans-serif;
+  font-weight: normal;
 }
 .font-open_sanslight_italic {
   font-family: 'open_sanslight_italic', sans-serif;
+  font-weight: normal;
 }
 .font-open_sanssemibold,
-.browser-firefox .header-title,
-.browser-firefox .font-open_sansbold {
+.browser-firefox .font-open_sansbold,
+#about .tooltip {
   font-family: 'open_sanssemibold', sans-serif;
+  font-weight: normal;
 }
 .font-open_sanssemibold_italic {
   font-family: 'open_sanssemibold_italic', sans-serif;
+  font-weight: normal;
 }
 .font-open_sans_condensedbold {
   font-family: 'open_sans_condensedbold', sans-serif;
+  font-weight: normal;
 }
-.font-open_sanscondensed_light {
+.font-open_sanscondensed_light,
+#contact .tooltip {
   font-family: 'open_sanscondensed_light', sans-serif;
 }
 .font-open_sansCnLtIt {
@@ -3964,6 +3974,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-inverse .navbar-nav > li > a:focus {
   color: #ffffff;
   background-color: transparent;
+  text-shadow: 0 0 2px #333333;
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
@@ -5945,11 +5956,13 @@ td.visible-print {
   padding-top: 50px;
   padding-bottom: 44px;
   background-image: url("http://cdn.ubl.loc/images/mother/home.jpg");
-  background-position: 50% 0;
+  background-position: center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-repeat: no-repeat;
   background-color: #050306;
-  -webkit-transition: background-position 0.2s;
-  transition: background-position 0.2s;
   color: white;
 }
 #home .left {
@@ -5972,6 +5985,12 @@ td.visible-print {
 }
 #home .left .header-title {
   font-size: 3.5em;
+  font-weight: normal;
+}
+@media (max-width: 480px) {
+  #home .left .header-title {
+    font-size: 2.5em;
+  }
 }
 #home .right header h1,
 #home .right header h2,
@@ -6026,17 +6045,18 @@ td.visible-print {
 #home .right .thumbnails img:hover {
   opacity: 0.7;
 }
+#banads .carousel-inner img {
+  width: 100%;
+  text-align: center;
+}
 #about {
   padding-top: 44px;
   padding-bottom: 66px;
   min-height: 525px;
   width: 100%;
-  overflow: hidden;
   background-color: #FFF;
   background-image: url("http://cdn.ubl.loc/images/mother/about.jpg");
-}
-#about .tooltip {
-  font-size: .8em;
+  overflow: hidden;
 }
 #about .img:hover img,
 #about .img:focus img {
@@ -6051,6 +6071,9 @@ td.visible-print {
 #about .img img {
   width: 100%;
 }
+#about .contents {
+  padding-top: 44px;
+}
 #about .description small {
   position: relative;
   top: -14px;
@@ -6061,11 +6084,38 @@ td.visible-print {
 #contact {
   max-height: 600px;
   color: #FFF;
+  overflow: hidden;
 }
-#contact .container {
+#contact .gmap-btn-bck {
+  width: 100%;
+  position: absolute;
+  display: none;
+}
+#contact .gmap-btn-bck .contents {
+  padding-top: 44px;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  margin-top: -44px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+#contact .gmap-btn-bck .contents:hover,
+#contact .gmap-btn-bck .contents:focus {
+  padding-bottom: 22px;
+  padding-top: 22px;
+  margin-top: 0;
+}
+#contact .gmap-btn {
+  position: absolute;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #FFF;
+  cursor: pointer;
+}
+#contact .contact-container.container {
   padding-top: 44px;
 }
-#contact .container .header-title {
+#contact .contact-container.container .header-title {
   text-shadow: 1px 1px 2px #333333;
 }
 #contact .map {
@@ -6088,4 +6138,23 @@ td.visible-print {
   height: 100%;
   vertical-align: middle;
   z-index: -11;
+}
+#contact .contents textarea {
+  max-width: 100%;
+  width: 100%;
+  resize: none;
+  height: 100%;
+  min-height: 120px;
+}
+#contact .contents .form-control {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  height: auto!important;
+}
+#contact .contents .form-group {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#contact .contents .submit {
+  color: #000;
 }
