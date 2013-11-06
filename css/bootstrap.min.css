@@ -820,7 +820,7 @@ th.hidden-lg,td.hidden-lg{display:table-cell !important}
 @media (min-width:1200px){.hidden-lg{display:none !important}tr.hidden-lg{display:none !important} th.hidden-lg,td.hidden-lg{display:none !important}}
 .visible-print{display:none !important}tr.visible-print{display:none !important}
 th.visible-print,td.visible-print{display:none !important}
-@media print{.visible-print{display:block !important}tr.visible-print{display:table-row !important} th.visible-print,td.visible-print{display:table-cell !important} .hidden-print{display:none !important}tr.hidden-print{display:none !important} th.hidden-print,td.hidden-print{display:none !important}}#home{padding-top:50px;padding-bottom:44px;background-image:url("http://cdn.ubl.loc/images/mother/home.jpg");background-position:center center;background-size:cover;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-repeat:no-repeat;background-color:#050306;color:white}#home .left{text-shadow:1px 1px 2px #000}#home .left img{width:100%}#home .left img[alt='get_wired']{width:90%;padding:15px;margin-left:auto;margin-right:auto;background-color:rgba(255,255,255,0.4)}
+@media print{.visible-print{display:block !important}tr.visible-print{display:table-row !important} th.visible-print,td.visible-print{display:table-cell !important} .hidden-print{display:none !important}tr.hidden-print{display:none !important} th.hidden-print,td.hidden-print{display:none !important}}#home{padding-top:50px;padding-bottom:44px;background-image:url("//d3rzn3r1l52zrm.cloudfront.net/images/mother/home.jpg");background-position:top center;background-size:cover;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-repeat:no-repeat;background-color:#050306;color:white}#home .left{text-shadow:1px 1px 2px #000}#home .left img{width:100%}#home .left img[alt='get_wired']{width:90%;padding:15px;margin-left:auto;margin-right:auto;background-color:rgba(255,255,255,0.4)}
 #home .left img[alt='phone']{float:left;width:50%;margin-right:10px}
 #home .left .header-title{font-size:3.5em;font-weight:normal}@media (max-width:480px){#home .left .header-title{font-size:2.5em}}
 #home .right header h1,#home .right header h2,#home .right header h3,#home .right header h4,#home .right header h5,#home .right header h6{text-shadow:1px 1px 2px rgba(0,0,0,0.2)}
@@ -832,14 +832,16 @@ th.visible-print,td.visible-print{display:none !important}
 #home .right .thumbnails p{-webkit-transition:all .2s;transition:all .2s;margin-bottom:-30px;height:30px;position:relative;background-color:rgba(0,0,0,0.75);line-height:30px;z-index:99}
 #home .right .thumbnails img{width:100%;cursor:pointer;-webkit-transition:all .2s;transition:all .2s}#home .right .thumbnails img:hover{opacity:0.7}
 #banads .carousel-inner img{width:100%;text-align:center}
-#about{padding-top:44px;padding-bottom:66px;min-height:525px;width:100%;overflow:hidden;background-color:#FFF;background-image:url("http://cdn.ubl.loc/images/mother/about.jpg");overflow:hidden}
+#about{padding-top:44px;padding-bottom:66px;min-height:525px;width:100%;overflow:hidden;background-color:#FFF;background-image:url("//d3rzn3r1l52zrm.cloudfront.net/images/mother/about.jpg");overflow:hidden}
 #about .img:hover img,#about .img:focus img{cursor:pointer}
 #about .img>.wrapper{overflow:hidden;max-width:400px;margin-left:auto;margin-right:auto}
 #about .img img{width:100%}
 #about .contents{padding-top:44px}
 #about .description small{position:relative;top:-14px}
 #about .description .name{font-weight:300}
-#contact{max-height:600px;color:#FFF;overflow:hidden}#contact .gmap-btn-bck{width:100%;position:absolute;display:none}#contact .gmap-btn-bck .contents{padding-top:44px;background-color:rgba(0,0,0,0.5);cursor:pointer;margin-top:-44px;-webkit-transition:all .2s;transition:all .2s}#contact .gmap-btn-bck .contents:hover,#contact .gmap-btn-bck .contents:focus{padding-bottom:22px;padding-top:22px;margin-top:0}
+#footer{background-color:#FFF;background-image:url("//d3rzn3r1l52zrm.cloudfront.net/images/mother/footer.png");padding-top:3em;padding-bottom:3em}#footer header p{margin:0;font-size:3em}
+#footer a{color:#333;text-decoration:none}
+#contact{height:600px;color:#FFF;overflow:hidden}#contact .gmap-btn-bck{width:100%;position:absolute;display:none}#contact .gmap-btn-bck .contents{padding-top:44px;background-color:rgba(0,0,0,0.5);cursor:pointer;margin-top:-44px;-webkit-transition:all .2s;transition:all .2s}#contact .gmap-btn-bck .contents:hover,#contact .gmap-btn-bck .contents:focus{padding-bottom:22px;padding-top:22px;margin-top:0}
 #contact .gmap-btn{position:absolute;padding:10px;background-color:rgba(0,0,0,0.2);color:#FFF;cursor:pointer}
 #contact .contact-container.container{padding-top:44px}#contact .contact-container.container .header-title{text-shadow:1px 1px 2px #333}
 #contact .map{position:absolute;height:100%;width:100%;z-index:-9;max-height:600px}#contact .map .overlay{background-color:rgba(0,0,0,0.5);position:absolute;height:100%;width:100%;z-index:1}
