@@ -78,14 +78,16 @@
 				$(element).find('.map .overlay').fadeOut();
 				$(element).find(btn).fadeOut();
 				$(element).find('.gmap-btn-bck').fadeIn();
+				$(element).find('.map').addClass('iamthemap');
 				$(element).find('.gmap-btn-bck').on({
 					click: function(){
 						$(element).find('.container.gmap-hide').fadeIn();
 						$(element).find('.map .overlay').fadeIn();
 						$(element).find(btn).fadeIn();
 						$(element).find('.gmap-btn-bck').fadeOut();
+						$(element).find('.map').removeClass('iamthemap');
 					}
-				})
+				});
 			}
 		});
 		return _this;
