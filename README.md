@@ -2,6 +2,13 @@
 Global Styles for Walis.PH
 
 From The repository of Bootstrap v3
+Be sure to install NodeJS
+
+http://nodejs.org/
+
+also install less
+	
+	npm install less
 
 In Linux:
 
