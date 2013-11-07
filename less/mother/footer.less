@@ -6,9 +6,15 @@
 	padding-top: @footer-font-size;
 	padding-bottom: @footer-font-size;
 	header {
+
 		p {
 			margin: 0;
 			font-size: @footer-font-size;
+			@media (max-width: @screen-xs) { 
+				& {
+					font-size: 2.5em;
+				}
+			}
 		}
 	}
 	a {

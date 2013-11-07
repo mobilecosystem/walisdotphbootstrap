@@ -37,6 +37,7 @@
 	}
 	.contact-container.container {
 		padding-top: (@line-height-computed * 2);
+		padding-bottom: (@line-height-computed * 2);
 		.header-title {
 			.txt-shadow();
 		}
@@ -49,7 +50,7 @@
 		height: 100%;
 		width: 100%;
 		z-index: -9;
-		max-height: 600px;
+		height: 600px;
 		.overlay {
 			background-color: fade(#000, 50%);
 			position: absolute;
@@ -66,12 +67,15 @@
 		}
 	}
 	.contents {
+		.ty {
+			font-size: 2em;
+		}
 		textarea {
 			max-width: 100%;
 			width: 100%;
 			resize: none;
 			height: 100%;
-			min-height: 120px;
+			//min-height: 120px;
 		}
 		.form-control {
 			padding-top: @padding-base-horizontal;
@@ -85,5 +89,6 @@
 		.submit {
 			color: #000;
 		}
+		
 	}
 }

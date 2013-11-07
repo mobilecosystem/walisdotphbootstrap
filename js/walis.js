@@ -45,13 +45,7 @@
 		},time);
 		return _this;
 	}
-	Walis.prototype.init = function() {
-		_this.navigation();
-		_this.gmap();
-		$('#contact .form-control').val('');
-		$('[data-toggle="tooltip"]').tooltip();
-		return _this;
-	}
+
 	Walis.prototype.resize = function() {
 
 	}
@@ -92,6 +86,78 @@
 		});
 		return _this;
 	}
+	Walis.prototype.contact = function(element) {
+		var e = element || '#contact';
+		/*
+		$('#contact form').on({
+			submit: function(evnt){
+				$(e).find('form').validate({
+					rules: {
+						name: {
+							required: true,
+							minlength: 2
+						},
+						email: {
+							required: true,
+							email: true
+						},
+						message: 'required'
+					}
+				})
+				//_this.contactAjax(e);
+				//evnt.preventDefault();
+				
+			}
+		});
+		*/
+		$(e).find('form').validate({
+			rules: {
+				name: {
+					required: true,
+					minlength: 2
+				},
+				email: {
+					required: true,
+					email: true
+				},
+				message: 'required'
+			},
+			submitHandler: function(form) {
+				//form.submit();
+				_this.contactAjax(e);
+			},
+			showErrors: function(ee, l) {
+				console.log(ee.name);
+				(ee.name) ? $(e).find('#name').parent().addClass('has-error') : $(e).find('#name').parent().removeClass('has-error');
+				(ee.email) ? $(e).find('#email').parent().addClass('has-error') : $(e).find('#email').parent().removeClass('has-error');
+				(ee.message) ? $(e).find('#message').parent().addClass('has-error') : $(e).find('#message').parent().removeClass('has-error')
+			}
+		})
+	}
+	Walis.prototype.contactAjax = function(element) {
+		// Contact Form
+		var e = element || '#contact';
+		var url = '/contactus';
+		$.ajax({
+			url: url,
+			type: 'POST',
+			data: $(e).find('form').serialize(),
+			success: function(data) {
+				//console.log(data);
+				$(e).find('.ty .alert-link').text(data.data.name);
+				$(e).find('.form').hide();
+				$(e).find('.ty').fadeIn();
+			}
+		});
+		return false;
+	}
 
-	//Walis.prototype.
+	Walis.prototype.init = function() {
+		_this.navigation();
+		_this.gmap();
+		_this.contact();
+		$('#contact .required').val('');
+		$('[data-toggle="tooltip"]').tooltip();
+		return _this;
+	}
 }(window, document));
