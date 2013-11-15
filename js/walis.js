@@ -152,12 +152,34 @@
 		return false;
 	}
 
+	Walis.prototype.hpackers = function(element) {
+		var e = element || '#clients';
+		$(e).find('img').lazyload({
+			event: 'turnPage',
+			effect: 'fadeIn'
+		});
+		$(e).find('.pager').jPages({
+			containerID: 'thumbnails',
+			animation: 'fadeInUp',
+			perPage: 24,
+			links: 'blank',
+			callback: function(p, i){
+				//console.log(i);
+				i.showing.find('img').trigger('turnPage');
+				i.oncoming.find('img').trigger('turnPage');
+				
+			}
+		})
+		return _this;
+	}
+
 	Walis.prototype.init = function() {
 		_this.navigation();
 		_this.gmap();
 		_this.contact();
 		$('#contact .required').val('');
 		$('[data-toggle="tooltip"]').tooltip();
+		_this.hpackers();
 		return _this;
 	}
 }(window, document));
