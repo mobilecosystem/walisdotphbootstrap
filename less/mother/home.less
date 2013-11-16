@@ -40,7 +40,24 @@
 		}
 	}
 	.right {
-		.transition(height .2s); 
+		ul.pager {
+			.transition(all .2s); 
+			.previous {
+				a {
+					cursor: pointer;
+					width: 50%;
+					border-radius: 5px 0 0 5px;
+				}
+			}
+			.next {
+				a {
+					cursor: pointer;
+					width: 50%;
+					border-radius: 0 5px 5px 0;
+				}
+			}
+		}
+		
 		.hidden-xs {
 			display: inline-block!important;
 			@media (max-width: @screen-xs-max) {
@@ -72,6 +89,7 @@
 			a { color: white; }
 		}
 		.thumbnails {
+			
 			a, a:hover, a:link, a:visited {
 				text-decoration: none;
 			}
@@ -108,12 +126,18 @@
 				width: 100%;
 				min-width: 153px;
 				cursor: pointer;
-				min-height: 123px;
+				//min-height: 123px;
 				height: 100%;
 				.transition(all .2s);
 				&:hover {
 					opacity: 0.7;
 				}
+			}
+		}
+
+		.comingsoonapps {
+			.gutter {
+				margin-top: 44px;
 			}
 		}
 	}

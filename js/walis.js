@@ -163,8 +163,12 @@
 			animation: 'fadeInUp',
 			perPage: 24,
 			links: 'blank',
+			previous: 'PREVIOUS',
+			next: 'NEXT',
+			minHeight: false,
 			callback: function(p, i){
-				//console.log(i);
+				console.log(i);
+				console.log(_this);
 				i.showing.find('img').trigger('turnPage');
 				i.oncoming.find('img').trigger('turnPage');
 				
