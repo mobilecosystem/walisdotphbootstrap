@@ -75,6 +75,8 @@
 			text-shadow: 1px 1px 2px fade(#000, 20%);
 			a {
 				color: #ededed;
+				display: table;
+				overflow: hidden;
 			}
 			p.text-uppercase {
 				background-color: fade(@ubl-color, 90%)!important;
@@ -140,6 +142,45 @@
 				margin-top: 44px;
 			}
 		}
+
+		.pager {
+			.jp-previous, .jp-next {
+				//width: 50%;
+				display: inline-block;
+				background-color: #FFF;
+				padding: 5px 14px;
+				border: 1px solid #ddd;
+				cursor: pointer;
+				text-decoration: none;
+				&.jp-disabled {
+					cursor: not-allowed;
+					color: #999;
+				}
+			}
+			.jp-current {
+				background-color: @brand-primary;
+				color: #FFF;
+				border: 1px solid @brand-primary;
+			}
+			a, span {
+				display: inline-block;
+				padding: 5px 10px;
+				background-color: #FFF;
+				border: 1px solid #ddd;
+				cursor: pointer;
+				text-decoration: none;
+			}
+			span {
+				color: #000;
+			}
+			.jp-previous {
+				border-radius: 5px 0 0 5px;
+			}
+			.jp-next {
+				border-radius: 0 5px 5px 0;
+			}
+		}
+
 	}
 
 }

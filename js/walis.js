@@ -162,8 +162,9 @@
 			containerID: 'thumbnails',
 			animation: 'fadeInUp',
 			perPage: 24,
-			links: 'blank',
+			//links: 'blank',
 			previous: 'PREVIOUS',
+			scrollBrowse: true,
 			next: 'NEXT',
 			minHeight: false,
 			callback: function(p, i){
