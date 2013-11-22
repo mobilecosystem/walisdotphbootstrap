@@ -170,8 +170,8 @@
 			callback: function(p, i){
 				// console.log(i);
 				// console.log(_this);
-				// i.showing.find('img').trigger('turnPage');
-				// i.oncoming.find('img').trigger('turnPage');
+				i.showing.find('img').trigger('turnPage');
+				i.oncoming.find('img').trigger('turnPage');
 				
 			}
 		})
