@@ -164,14 +164,14 @@
 			perPage: 24,
 			//links: 'blank',
 			previous: 'PREVIOUS',
-			scrollBrowse: true,
+			//scrollBrowse: true,
 			next: 'NEXT',
 			minHeight: false,
 			callback: function(p, i){
-				console.log(i);
-				console.log(_this);
-				i.showing.find('img').trigger('turnPage');
-				i.oncoming.find('img').trigger('turnPage');
+				// console.log(i);
+				// console.log(_this);
+				// i.showing.find('img').trigger('turnPage');
+				// i.oncoming.find('img').trigger('turnPage');
 				
 			}
 		})
