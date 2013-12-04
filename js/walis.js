@@ -163,7 +163,7 @@
 			animation: 'fadeInUp',
 			perPage: 24,
 			//links: 'blank',
-			previous: 'PREVIOUS',
+			previous: 'PREV',
 			//scrollBrowse: true,
 			next: 'NEXT',
 			minHeight: false,
