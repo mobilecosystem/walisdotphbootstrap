@@ -166,6 +166,7 @@
 			previous: 'PREV',
 			//scrollBrowse: true,
 			next: 'NEXT',
+			midRange: 10,
 			minHeight: false,
 			callback: function(p, i){
 				// console.log(i);
